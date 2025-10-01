@@ -98,7 +98,8 @@ header {
 }
 
 .btn-ver:hover {
-  background-color: #252322; /* o un tono más oscuro del naranja */
+  background-color: #272424;
+   color: white; 
 }
 
 /* Login */
