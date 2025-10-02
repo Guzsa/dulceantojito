@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  font-family: 'inter', sans-serif;
   position: relative;
   background-image: url('../assets/imagen-fondo.webp');
   background-size: cover;
@@ -37,8 +38,25 @@ body::before {
   height: 100%;
   background-color: rgba(255, 248, 240, 0.6); /* Más opacidad */
   z-index: -1;
+
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
+.logo span,
+.about p,
+.testimonio h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+}
+
+.about p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  
+}
 
 h2 {
   font-size: 2.2rem;         
@@ -52,39 +70,17 @@ h2 {
 
 /* ========== HEADER & NAV ========== */
 header {
-  background-color: var(--color-primario);
+  background-color: transparent;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  flex-wrap: wrap;
+  padding: 0;
+}
+.navbar {
+  background-color: var(--color-secundario) !important;
+  margin: 0;
+  padding: 0.8rem;
+
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  margin-left: 1rem;
-}
-
-/* Logo */
-.logo {
-  text-align: center;
-}
-.logo h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.logo p {
-  font-size: 0.9rem;
-  font-weight: 300;
-}
-
-/* Navegación principal */
 .nav-principal ul {
   list-style: none;
   display: flex;
@@ -101,6 +97,20 @@ header {
   background-color: #272424;
    color: white; 
 }
+
+/* Logo */
+.logo {
+  text-align: center;
+}
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
 
 /* Login */
 .login {
@@ -167,6 +177,7 @@ main h2 {
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 300px;
@@ -189,6 +200,7 @@ main h2 {
   margin-bottom: 0.5rem;
 }
 .card button {
+  margin-top: auto;
   padding: 0.5rem 1rem;
   background-color: var(--color-secundario);
   color: white;
