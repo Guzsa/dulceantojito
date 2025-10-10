@@ -9,16 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- CSS personalizado -->
-  <link rel="stylesheet" href="../css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="../css/backup.css">
 </head>
 <body>
-
+<header>
   <!-- HEADER / NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
@@ -29,7 +25,6 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
@@ -44,31 +39,25 @@
       </div>
     </div>
   </nav>
+</header>
   <!-- FIN HEADER -->
-
   <main>
     <section class="crear-cuenta-section">
       <h2>Crear Cuenta</h2>
       <p>Completá tus datos para registrarte y empezar a disfrutar de nuestros productos.</p>
-
       <form class="crear-cuenta-form">
         <label for="nombre">Nombre completo</label>
         <input type="text" id="nombre" name="nombre" required>
-
         <label for="email">Correo electrónico</label>
         <input type="email" id="email" name="email" required>
-
         <label for="usuario">Usuario</label>
         <input type="text" id="usuario" name="usuario" required>
-
         <label for="password">Contraseña</label>
         <input type="password" id="password" name="password" required>
-
         <button type="submit">Registrarse</button>
       </form>
     </section>
   </main>
-
     <footer class="footer">
   <div class="footer-info">
     <p>&copy; 2025 DULCE ANTOJITO BY ANGIE. Todos los derechos reservados.</p>
@@ -80,8 +69,6 @@
     </ul>
   </div>
 </footer>
-
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

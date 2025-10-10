@@ -1,0 +1,36 @@
+{
+  "name": "dulce-antojitos",
+  "version": "1.0.0",
+  "description": "\"Sitio web para Dulce Antojitos, una pastelería artesanal con enfoque emocional y diseño responsivo.\"",
+  "keywords": [
+    "[\"pastelería\"",
+    "\"diseño",
+    "web\"",
+    "\"sass\"",
+    "\"bootstrap\"",
+    "\"html\"",
+    "\"css\"",
+    "\"emocional\"",
+    "\"responsive\"",
+    "\"artesanal\"",
+    "\"dulce\"",
+    "\"interfaz\"",
+    "\"calidez\"",
+    "\"melancolía\"]"
+  ],
+  "homepage": "https://github.com/Guzsa/dulceantojito#readme",
+  "bugs": {
+    "url": "https://github.com/Guzsa/dulceantojito/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guzsa/dulceantojito.git"
+  },
+  "license": "ISC",
+  "author": "\"Santiago Guzman <santiguzman1336gmail.com>",
+  "type": "commonjs",
+  "main": "entry point: (index.js)",
+  "scripts": {
+    "test": "echo \"No test specified\""
+  }
+}
