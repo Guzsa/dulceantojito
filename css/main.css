@@ -35,6 +35,17 @@ h1, h2, h3 {
   letter-spacing: 1px;
 }
 
+h2 {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+p {
+  text-align: center;
+}
+
 header {
   background-color: transparent;
   color: #fff;
@@ -116,10 +127,10 @@ header {
 .cards-container-productos,
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 1.5rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  padding: 2rem;
+  justify-items: stretch;
 }
 .cards-container-inicio h2,
 .cards-container-productos h2,
@@ -147,13 +158,14 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
 }
 .card:hover {
   transform: scale(1.03);
 }
-.card-img {
+.card .card-img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -174,19 +186,19 @@ header {
 }
 
 .promo {
-  padding: 1rem;
+  padding: 1.2rem;
 }
 .promo:hover {
   transform: scale(1.03);
 }
 .promo img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   border-radius: 6px;
 }
 .promo h3 {
-  margin: 1rem 0 0.5rem;
+  margin: 1.2rem 0 0.7rem;
   color: #d35400;
 }
 .promo p {
