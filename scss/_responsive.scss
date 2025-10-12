@@ -1,12 +1,12 @@
 @use "variables" as *;
 
-@media (min-width: $break-desktop) {
+/* ========== RESPONSIVE GENERAL ========== */
+@media (min-width: 1024px) {
   body {
     background-attachment: fixed;
   }
 }
-
-@media (max-width: $break-mobile) {
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -21,7 +21,7 @@
     flex-direction: column;
     width: 100%;
     display: none;
-    background-color: $color-primario;
+    background-color: var(--color-primario);
     padding: 1rem 0;
     align-items: center;
   }
@@ -30,16 +30,32 @@
   .login.show {
     display: flex;
   }
-}
 
-@media (max-width: 768px) {
-  .cards-container-inicio {
+  .footer {
+    font-size: 0.85rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-info ul li {
+    text-align: center;
+  }
+
+  .cards-container-productos {
     grid-template-columns: 1fr;
     padding: 1rem;
   }
 
-  .card {
-    max-width: 100%;
+  .login-section,
+  .crear-cuenta-section {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 0.9rem;
   }
 }
+
 

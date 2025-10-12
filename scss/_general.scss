@@ -49,7 +49,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: variables.$color-fondo-suave; // ✅ ahora sí funciona
+  background-color: variables.$color-fondo-suave; 
   z-index: 0;
 
   &::before {
