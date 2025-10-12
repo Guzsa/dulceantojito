@@ -1,0 +1,45 @@
+@use "variables" as *;
+
+@media (min-width: $break-desktop) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: $break-mobile) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-principal ul,
+  .login {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: $color-primario;
+    padding: 1rem 0;
+    align-items: center;
+  }
+
+  .nav-principal ul.show,
+  .login.show {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container-inicio {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+

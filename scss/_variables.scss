@@ -1,7 +1,24 @@
+// ========== VARIABLES ==========
+
+//  Colores
 $color-primario: #1c435e;
 $color-secundario: #ff6600;
 $color-fondo-suave: #fff8f0;
 $color-texto: #131111;
 $color-hover: #252322;
 $color-borde-suave: #f0c090;
-$color-destacado: #d35400; 
+$color-destacado: #d35400;
+
+//  Sombras y overlays
+$color-sombra-suave: rgba(0, 0, 0, 0.1);
+$color-sombra-fuerte: rgba(0, 0, 0, 0.2);
+$color-overlay: rgba(255, 248, 240, 0.6);
+
+//  Tipografía
+$fuente-principal: 'Inter', sans-serif;
+$fuente-secundaria: 'Montserrat', sans-serif;
+$fuente-texto: 'Roboto', sans-serif;
+
+//  Breakpoints
+$break-mobile: 768px;
+$break-desktop: 1024px;
