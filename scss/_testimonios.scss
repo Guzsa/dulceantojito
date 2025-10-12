@@ -1,0 +1,27 @@
+@use "mixins" as *; 
+@use "variables" as *;
+.testimonios {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  text-align: center;
+
+  h2 { font-size: 2rem; margin-bottom: 2rem; color: #333; }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .testimonio {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    @include borde-redondeado();
+    @include sombra-suave;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    h4 { margin-top: 1rem; font-weight: bold; color: #555; }
+  }
+}

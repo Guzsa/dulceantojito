@@ -1,24 +1,12 @@
-// ========== MIXINS ==========
+@use "variables" as *; 
 
-@mixin sombra-suave {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+@mixin borde-redondeado($radio: $border-radius-default) {
+  border-radius: $radio;
 }
-
-@mixin sombra-fuerte {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-@mixin transicion-suave($prop: all, $duracion: 0.3s) {
-  transition: $prop $duracion ease;
-}
-
-@mixin borde-redondeado($radio: 8px) {
+@mixin borde-redondeado($radio: $border-radius-default) {
   border-radius: $radio;
 }
 
-@mixin contenedor {
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 1.5rem;
-  text-align: center;
+@mixin sombra-suave($sombra: $box-shadow-default) {
+  box-shadow: $sombra;
 }

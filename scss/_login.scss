@@ -1,0 +1,51 @@
+@use "mixins" as *; 
+@use "variables" as *;
+
+.pagina-login,
+.pagina-crear-cuenta {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina-login { background-image: url('../assets/fondo-login.jpg'); }
+.pagina-crear-cuenta { background-image: url('../assets/fondo-crear-cuenta.jpg'); }
+
+.login-section,
+.crear-cuenta-section {
+  max-width: 400px;
+  margin: auto;
+  background-color: rgba(255,248,240,0.95);
+  padding: 2rem;
+  @include borde-redondeado(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+
+  h2 { font-size: 2rem; margin-bottom: 1rem; color: #d35400; }
+  p  { font-size: 1rem; color: #555; margin-bottom: 2rem; }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label { text-align: left; font-weight: bold; color: #444; }
+    input { padding: 0.75rem; border: 1px solid #ccc; @include borde-redondeado(6px); }
+    button {
+      padding: 0.75rem 1rem;
+      background-color: $color-secundario;
+      color: white;
+      border: none;
+      @include borde-redondeado(6px);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover { background-color: #252322; }
+    }
+  }
+}

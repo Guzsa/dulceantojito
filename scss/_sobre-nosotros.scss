@@ -1,0 +1,29 @@
+@use "mixins" as *; 
+@use "variables" as *;
+.sobre-nosotros {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url('../assets/fondo-nosotros.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #333;
+
+  p {
+    background-color: rgba(255,248,240,0.85);
+    padding: 1rem;
+    @include borde-redondeado(10px);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .imagen-sobre-nosotros {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    @include borde-redondeado();
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+}

@@ -1,61 +1,38 @@
 @use "variables" as *;
 
-/* ========== RESPONSIVE GENERAL ========== */
 @media (min-width: 1024px) {
-  body {
-    background-attachment: fixed;
-  }
+  body { 
+    background-attachment: fixed; }
 }
+
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
+  header { flex-direction: column; align-items: flex-start; }
+  .menu-toggle { display: block; }
   .nav-principal ul,
   .login {
     flex-direction: column;
     width: 100%;
     display: none;
-    background-color: var(--color-primario);
+    background-color: $color-primario;
     padding: 1rem 0;
     align-items: center;
-  }
 
-  .nav-principal ul.show,
-  .login.show {
-    display: flex;
+    &.show { display: flex; }
   }
 
   .footer {
     font-size: 0.85rem;
     padding: 1.5rem 1rem;
   }
+  .footer-info ul li { text-align: center; }
 
-  .footer-info ul li {
-    text-align: center;
-  }
-
-  .cards-container-productos {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
+  .cards-container-productos { grid-template-columns: 1fr; padding: 1rem; }
 
   .login-section,
-  .crear-cuenta-section {
-    width: 90%;
-    margin: 2rem auto;
-    padding: 1.5rem;
-  }
+  .crear-cuenta-section { width: 90%; margin: 2rem auto; padding: 1.5rem; }
 
   .formulario-contacto input,
-  .formulario-contacto textarea {
-    font-size: 0.9rem;
-  }
+  .formulario-contacto textarea { font-size: 0.9rem; }
 }
 
 

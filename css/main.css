@@ -21,7 +21,10 @@ body {
 body::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255, 248, 240, 0.6);
   z-index: -1;
 }
@@ -32,34 +35,10 @@ h1, h2, h3 {
   letter-spacing: 1px;
 }
 
-h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  color: #333;
-  margin: 2rem 0 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-p {
-  text-align: center;
-}
-
-.logo span,
-.about p,
-.testimonio h4 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-}
-
-.about p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 header {
   background-color: transparent;
   color: #fff;
+  padding: 0;
 }
 
 .navbar {
@@ -72,6 +51,7 @@ header {
   display: flex;
   gap: 1.5rem;
 }
+
 .nav-principal a {
   text-decoration: none;
   color: #fff;
@@ -99,13 +79,184 @@ header {
   gap: 1rem;
 }
 .login a {
+  text-decoration: none;
   color: #fff;
   font-weight: 500;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 .login a:hover {
   color: #ffcc00;
+}
+
+.btn-ver,
+.card button,
+.promo button,
+.formulario-contacto button,
+.login-form button,
+.crear-cuenta-form button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  background-color: #ff6600;
+  color: white;
+}
+.btn-ver:hover,
+.card button:hover,
+.promo button:hover,
+.formulario-contacto button:hover,
+.login-form button:hover,
+.crear-cuenta-form button:hover {
+  background-color: #252322;
+}
+
+.cards-container-inicio,
+.cards-container-productos,
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1.5rem;
+  justify-items: center;
+}
+.cards-container-inicio h2,
+.cards-container-productos h2,
+.cards-container h2 {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.card,
+.promo,
+.testimonio {
+  background-color: #fff8f0;
+  border: 1px solid #f0c090;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #181616;
+  font-size: 1.1rem;
+}
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+.card button {
+  margin-top: auto;
+}
+
+.promo {
+  padding: 1rem;
+}
+.promo:hover {
+  transform: scale(1.03);
+}
+.promo img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.promo h3 {
+  margin: 1rem 0 0.5rem;
+  color: #d35400;
+}
+.promo p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.about {
+  text-align: center;
+  max-width: 50rem;
+  margin: 3.125rem auto;
+  padding: 1.25rem;
+}
+.about h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.9375rem;
+}
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.testimonios {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+.testimonios h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.testimonios .testimonio {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.testimonios .testimonio h4 {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.promociones {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+.promociones h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.promociones .promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .footer {
@@ -132,103 +283,88 @@ header {
   color: #555;
 }
 
-.btn-ver,
-.card button,
-.promo button,
-.formulario-contacto button,
-.login-form button,
-.crear-cuenta-form button {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+.sobre-nosotros {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url("../assets/fondo-nosotros.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}
+.sobre-nosotros p {
+  background-color: rgba(255, 248, 240, 0.85);
+  padding: 1rem;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.sobre-nosotros .imagen-sobre-nosotros {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn-ver,
-.card button,
-.promo button,
-.formulario-contacto button,
-.login-form button,
-.crear-cuenta-form button {
-  background-color: #ff6600;
-  color: white;
-}
-.btn-ver:hover,
-.card button:hover,
-.promo button:hover,
-.formulario-contacto button:hover,
-.login-form button:hover,
-.crear-cuenta-form button:hover {
-  background-color: #4d4643;
-}
-
-.cards-container-inicio,
-.cards-container-productos,
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 1.5rem;
-  justify-items: center;
-}
-
-.card {
+.contacto {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
   background-color: #fff8f0;
   border: 1px solid #f0c090;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 300px;
-  padding: 1rem;
+  text-align: center;
 }
-.card:hover {
-  transform: scale(1.03);
+.contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d35400;
 }
-.card-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-.card h3 {
-  margin: 1rem 0 0.5rem;
-  color: #131111;
-  font-size: 1.1rem;
-}
-.card p {
+.contacto p {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
-.card button {
-  margin-top: auto;
+.contacto .info-contacto p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+.contacto .formulario-contacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.contacto .formulario-contacto label {
+  text-align: left;
+  font-weight: bold;
+  color: #444;
+}
+.contacto .formulario-contacto input, .contacto .formulario-contacto textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contacto .formulario-contacto button {
+  padding: 0.75rem 1.5rem;
   background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.card button:hover {
-  background-color: #4d4643;
-}
-
-.about {
-  text-align: center;
-  max-width: 50rem;
-  margin: 3.125rem auto;
-  padding: 1.25rem;
-}
-
-.promociones,
-.testimonios,
-.contacto {
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 1.5rem;
-  text-align: center;
+.contacto .formulario-contacto button:hover {
+  background-color: #252322;
 }
 
 .pagina-login,
@@ -242,7 +378,70 @@ header {
   flex-direction: column;
 }
 
-/* ========== RESPONSIVE GENERAL ========== */
+.pagina-login {
+  background-image: url("../assets/fondo-login.jpg");
+}
+
+.pagina-crear-cuenta {
+  background-image: url("../assets/fondo-crear-cuenta.jpg");
+}
+
+.login-section,
+.crear-cuenta-section {
+  max-width: 400px;
+  margin: auto;
+  background-color: rgba(255, 248, 240, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.login-section h2,
+.crear-cuenta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d35400;
+}
+.login-section p,
+.crear-cuenta-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+.login-section form,
+.crear-cuenta-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login-section form label,
+.crear-cuenta-section form label {
+  text-align: left;
+  font-weight: bold;
+  color: #444;
+}
+.login-section form input,
+.crear-cuenta-section form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.login-section form button,
+.crear-cuenta-section form button {
+  padding: 0.75rem 1rem;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login-section form button:hover,
+.crear-cuenta-section form button:hover {
+  background-color: #252322;
+}
+
 @media (min-width: 1024px) {
   body {
     background-attachment: fixed;
@@ -261,7 +460,7 @@ header {
     flex-direction: column;
     width: 100%;
     display: none;
-    background-color: var(--color-primario);
+    background-color: #1c435e;
     padding: 1rem 0;
     align-items: center;
   }
@@ -290,73 +489,6 @@ header {
   .formulario-contacto textarea {
     font-size: 0.9rem;
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  position: relative;
-  background-image: url("../assets/imagen-fondo.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #fff8f0;
-  z-index: 0;
-}
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 248, 240, 0.6);
-  z-index: -1;
-}
-
-.promociones {
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.promo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.promo {
-  background-color: #fff8f0;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.promo:hover {
-  transform: scale(1.03);
-}
-
-.promo img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.promo h3 {
-  margin: 1rem 0 0.5rem;
-  color: #d35400;
 }
 
 /*# sourceMappingURL=main.css.map */

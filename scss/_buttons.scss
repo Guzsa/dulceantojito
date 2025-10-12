@@ -1,0 +1,21 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.btn-ver,
+.card button,
+.promo button,
+.formulario-contacto button,
+.login-form button,
+.crear-cuenta-form button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  background-color: $color-secundario;
+  color: white;
+
+  &:hover { background-color: #252322; }
+}
+

@@ -1,7 +1,5 @@
 @use "variables" as *;
-@use "mixins" as *;
 
-// ========== RESETEO GENERAL ==========
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +10,8 @@ html {
   font-size: 16px;
 }
 
-// ========== ESTILOS BASE ==========
 body {
-  font-family: $fuente-principal;
+  font-family: $font-base;
   position: relative;
   background-image: url('../assets/imagen-fondo.webp');
   background-size: cover;
@@ -26,38 +23,16 @@ body {
   &::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background-color: $color-overlay;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 248, 240, 0.6);
     z-index: -1;
   }
 }
 
 h1, h2, h3 {
-  font-family: $fuente-secundaria;
+  font-family: $font-heading;
   font-weight: 700;
   letter-spacing: 1px;
-}
-
-h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  color: #333;
-  margin: 2rem 0 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-p {
-text-align: center;
-}
-.logo span,
-.about p,
-.testimonio h4 {
-  font-family: $fuente-texto;
-  font-size: 1.2rem;
-}
-
-.about p {
-  text-shadow: 1px 1px 2px $color-sombra-suave;
 }

@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+.footer {
+  background-color: $color-fondo-suave;
+  color: #333;
+  padding: 2rem 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 2px solid $color-borde-suave;
+
+  .footer-info {
+    p { margin: 0.5rem 0; font-weight: bold; color: #1a1817; }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      li { margin: 0.3rem 0; color: #555; }
+    }
+  }
+}
