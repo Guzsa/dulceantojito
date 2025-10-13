@@ -4,7 +4,7 @@
   max-width: 800px;
   margin: 3rem auto;
   padding: 2rem;
-  background-color: $color-fondo-suave;
+  background-color: $color-fondo;
   border: 1px solid $color-borde-suave;
   @include borde-redondeado();
   @include sombra-suave;
@@ -34,7 +34,7 @@
 
     button {
       padding: 0.75rem 1.5rem;
-      background-color: $color-secundario;
+      background-color: $color-primario;
       color: white;
       border: none;
       @include borde-redondeado(6px);

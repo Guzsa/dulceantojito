@@ -22,7 +22,7 @@
 .card,
 .promo,
 .testimonio {
-  background-color: $color-fondo-suave;
+  background-color: $color-fondo;
   border: 1px solid $color-borde-suave;
   @include borde-redondeado();
   @include sombra-suave;

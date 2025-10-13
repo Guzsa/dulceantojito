@@ -37,7 +37,7 @@
     input { padding: 0.75rem; border: 1px solid #ccc; @include borde-redondeado(6px); }
     button {
       padding: 0.75rem 1rem;
-      background-color: $color-secundario;
+      background-color: $color-primario;
       color: white;
       border: none;
       @include borde-redondeado(6px);
