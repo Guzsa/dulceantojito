@@ -196,6 +196,8 @@ header {
   padding: 1.5rem;
   width: 100%;
   max-width: 350px;
+  animation: fadeInUp 0.8s ease-out both;
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
 .card:hover {
   transform: scale(1.03);
@@ -500,6 +502,16 @@ header {
   .formulario-contacto input,
   .formulario-contacto textarea {
     font-size: 0.9rem;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

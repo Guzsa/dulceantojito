@@ -10,3 +10,8 @@
 @mixin sombra-suave($sombra: $box-shadow-default) {
   box-shadow: $sombra;
 }
+
+@mixin fadeInUp($duration: 0.8s, $delay: 0s) {
+  animation: fadeInUp $duration ease-out $delay both;
+}
+
