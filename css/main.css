@@ -46,6 +46,41 @@ p {
   text-align: center;
 }
 
+.about {
+  text-align: center;
+  max-width: 50rem;
+  margin: 3.125rem auto;
+  padding: 1.25rem;
+}
+.about h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.9375rem;
+}
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.promociones {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+.promociones h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.promociones .promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
 header {
   background-color: transparent;
   color: #fff;
@@ -206,24 +241,6 @@ header {
   color: #555;
 }
 
-.about {
-  text-align: center;
-  max-width: 50rem;
-  margin: 3.125rem auto;
-  padding: 1.25rem;
-}
-.about h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 0.9375rem;
-}
-.about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 .testimonios {
   max-width: 1000px;
   margin: 3rem auto;
@@ -252,23 +269,6 @@ header {
   margin-top: 1rem;
   font-weight: bold;
   color: #555;
-}
-
-.promociones {
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 1.5rem;
-  text-align: center;
-}
-.promociones h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-.promociones .promo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
 }
 
 .footer {
